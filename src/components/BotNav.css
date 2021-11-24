@@ -1,0 +1,31 @@
+.bottom-nav {
+  background: gray;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+.nav-link {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-link:hover {
+  color: blue;
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+.active {
+  color: blue;
+}
