@@ -24,22 +24,25 @@ export default function Role(props) {
   console.log(role)
 
   return (
-    <div>
+    <div className="role">
       <h1>Role</h1>
-      {role === undefined
-        ? 'Loading...'
-        : role.map((r) => {
-            return (
-              <div key={r.role_id}>
-                <NavLink
-                  to={`/role/${r.role_name}`}
-                  onClick={() => history.push(`/role/${r.role_name}`)}
-                >
-                  <p>{r.role_name}</p>
-                </NavLink>
-              </div>
-            )
-          })}
+      <div className="role-container">
+        {role === undefined
+          ? 'Loading...'
+          : role.map((r) => {
+              return (
+                <div key={r.role_id}>
+                  <NavLink
+                    to={`/role/${r.role_name}`}
+                    onClick={() => history.push(`/role/${r.role_name}`)}
+                    className="link"
+                  >
+                    <p>{r.role_name}</p>
+                  </NavLink>
+                </div>
+              )
+            })}
+      </div>
     </div>
   )
 }

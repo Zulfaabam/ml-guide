@@ -1,5 +1,5 @@
 .bottom-nav {
-  background: gray;
+  background: var(--bg-light);
   position: fixed;
   bottom: 0;
   display: flex;
@@ -19,7 +19,7 @@
 }
 
 .nav-link:hover {
-  color: blue;
+  color: var(--blue);
 }
 
 .icon {
@@ -27,5 +27,5 @@
 }
 
 .active {
-  color: blue;
+  color: var(--blue);
 }

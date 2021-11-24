@@ -26,22 +26,27 @@ export default function RoleHeroes() {
   //   console.log(roleDesc)
 
   return (
-    <div>
+    <div className="role">
       <h1>{roleName} Heroes</h1>
-      <h2>Description:</h2>
-      {roleDesc.map(
-        (r) => r.name.includes(roleName) && <p key={r.name}>{r.desc}</p>
-      )}
-      {hero === undefined
-        ? 'Loading...'
-        : hero.map((h) => {
-            return (
-              <div key={h.hero_id}>
-                {/* <img src={h.hero_avatar} alt={`gambar ${h.hero_name}`} /> */}
-                <p>{h.hero_name}</p>
-              </div>
-            )
-          })}
+      <div className="role-desc">
+        <h2>Description:</h2>
+        {roleDesc.map(
+          (r) => r.name.includes(roleName) && <p key={r.name}>{r.desc}</p>
+        )}
+      </div>
+      <div className="role-heroes">
+        <h2>Heroes:</h2>
+        {hero === undefined
+          ? 'Loading...'
+          : hero.map((h) => {
+              return (
+                <div key={h.hero_id}>
+                  {/* <img src={h.hero_avatar} alt={`gambar ${h.hero_name}`} /> */}
+                  <p>{h.hero_name}</p>
+                </div>
+              )
+            })}
+      </div>
     </div>
   )
 }

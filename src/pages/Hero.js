@@ -24,23 +24,26 @@ export default function Hero(props) {
   console.log(hero)
 
   return (
-    <div>
-      <h1>hero</h1>
-      {hero === undefined
-        ? 'Loading...'
-        : hero.map((h) => {
-            return (
-              <div key={h.hero_id}>
-                {/* <img src={h.hero_avatar} alt={`gambar ${h.hero_name}`} /> */}
-                <NavLink
-                  to={`/hero/${h.hero_id}`}
-                  onClick={() => history.push(`/hero/${h.hero_id}`)}
-                >
-                  <p>{h.hero_name}</p>
-                </NavLink>
-              </div>
-            )
-          })}
+    <div className="hero">
+      <h1>Mobile Legends Hero</h1>
+      <div className="hero-container">
+        {hero === undefined
+          ? 'Loading...'
+          : hero.map((h) => {
+              return (
+                <div key={h.hero_id}>
+                  {/* <img src={h.hero_avatar} alt={`gambar ${h.hero_name}`} /> */}
+                  <NavLink
+                    to={`/hero/${h.hero_id}`}
+                    onClick={() => history.push(`/hero/${h.hero_id}`)}
+                    className="link"
+                  >
+                    <p>{h.hero_name}</p>
+                  </NavLink>
+                </div>
+              )
+            })}
+      </div>
     </div>
   )
 }

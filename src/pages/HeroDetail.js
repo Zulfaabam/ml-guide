@@ -24,13 +24,15 @@ export default function HeroDetail() {
   console.log(hero)
 
   return (
-    <div>
+    <div className="hero">
+      <h1>
+        Hero Detail - {hero === undefined ? 'Loading...' : hero[0].hero_name}
+      </h1>
       {hero === undefined
         ? 'Loading...'
         : hero.map((h) => {
             return (
-              <div key={h.hero_id}>
-                <h1>Hero detail - {h.hero_name}</h1>
+              <div key={h.hero_id} className="hero-detail">
                 {/* <img src={h.hero_avatar} alt={`gambar ${h.hero_name}`} /> */}
                 <p>Hero ID: {h.hero_id}</p>
                 <p>Hero Name: {h.hero_name}</p>

@@ -12,17 +12,126 @@ code {
     monospace;
 }
 
+:root {
+  --bg-dark: #020e17;
+  --bg-light: #013440;
+  --blue: #44c0e2;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3 {
+  color: white;
+}
+
 .link {
-  color: #61dafb;
+  color: var(--blue);
   text-decoration: none;
 }
 
 .active {
-  color: #61dafb;
+  color: var(--blue);
+}
+
+.home,
+.hero,
+.role,
+.about {
+  height: 100vh;
+  background: var(--bg-dark);
+  padding: 1rem;
+  overflow: auto;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.hero h1,
+.role h1 {
+  text-align: center;
+}
+
+.role p,
+.about p {
+  color: white;
+}
+
+.hero-container,
+.role-container,
+.role-heroes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem 5rem;
+  gap: 1rem;
+  text-align: center;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.hero-container div,
+.role-container div,
+.role-heroes div {
+  border: 1px solid var(--bg-light);
+  padding: 0.5rem;
+  border-radius: 10px;
+  width: 100px;
+}
+
+.hero-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem 5rem;
+  gap: 1rem;
+  text-align: center;
+  max-width: 425px;
+  margin: 0 auto;
+  color: white;
+}
+
+.role-desc {
+  max-width: 768px;
+  margin: 1rem auto;
+  text-align: justify;
+}
+
+.role-heroes h2 {
+  width: 100px;
+}
+
+.about h2 {
+  margin-top: 1rem;
+}
+
+.about img {
+  width: 250px;
+  align-self: center;
+}
+
+.about-app,
+.about-me {
+  max-width: 540px;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.about-me p {
+  align-self: center;
 }
